@@ -139,18 +139,14 @@
         //draw picture from video on canvas
         ctx.drawImage(video, 0, 0);
 
-        /*
         //modify the picture using glfx.js filters
         texture = fxCanvas.texture(canvas);
         fxCanvas.draw(texture)
-            .hueSaturation(-1, -1)//grayscale
-            .unsharpMask(20, 2)
-            .brightnessContrast(0.2, 0.9)
             .update();
 
         window.texture = texture;
         window.fxCanvas = fxCanvas;
-*/
+
         $(img)
             //setup the crop utility
             .one('load', function () {
