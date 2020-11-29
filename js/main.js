@@ -155,8 +155,23 @@
         var canvas = document.querySelector('#step3 canvas');
         var step2Image = document.querySelector('#step2 img');
 
+        var scale = step2Image.width / $(step2Image).width();
+
+        //draw cropped image on the canvas
+        canvas.width = step2Image.w * scale;
+        canvas.height = step2Image.h * scale;
+
         var ctx = canvas.getContext('2d');
-        ctx.drawImage(step2Image, 0, 0);
+        ctx.drawImage(
+            step2Image,
+            step2Image.x * scale,
+            step2Image.y * scale,
+            step2Image.w * scale,
+            step2Image.h * scale,
+            0,
+            0,
+            step2Image.w * scale,
+            step2Image.h * scale);
 
         var spinner = $('.spinner');
         spinner.show();
