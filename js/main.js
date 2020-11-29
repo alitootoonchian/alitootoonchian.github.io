@@ -178,6 +178,7 @@
         $('blockquote p').text('');
         $('blockquote footer').text('');
 
+        /*
         // do the OCR!
         Tesseract.recognize(ctx).then(function (result) {
             var resultText = result.text ? result.text.trim() : '';
@@ -186,7 +187,7 @@
             spinner.hide();
             $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
             $('blockquote footer').text('(' + resultText.length + ' characters)');
-        });
+        });*/
     }
 
     /*********************************
