@@ -47,3 +47,7 @@ document.querySelector('video').addEventListener('play', function() {
   document.querySelector('#grabFrameButton').disabled = false;
   document.querySelector('#takePhotoButton').disabled = false;
 });
+
+document.querySelector('#getUserMediaButton').addEventListener('click', onGetUserMediaButtonClick);
+document.querySelector('#grabFrameButton').addEventListener('click', onGrabFrameButtonClick);
+document.querySelector('#takePhotoButton').addEventListener('click', onTakePhotoButtonClick);
