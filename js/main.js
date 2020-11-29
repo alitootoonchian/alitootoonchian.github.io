@@ -44,6 +44,7 @@
                     return source.id;
                 });
 
+                print(rearCameraIds.length)
                 if (rearCameraIds.length) {
                     deferred.resolve(rearCameraIds[0]);
                 } else {
