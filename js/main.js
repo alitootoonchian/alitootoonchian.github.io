@@ -147,23 +147,7 @@
         window.texture = texture;
         window.fxCanvas = fxCanvas;
 
-        $(img)
-            //setup the crop utility
-            .one('load', function () {
-                if (!$(img).data().Jcrop) {
-                    $(img).Jcrop({
-                        onSelect: function () {
-                            //Enable the 'done' button
-                            $('#adjust').removeAttr('disabled');
-                        }
-                    });
-                } else {
-                    //update crop tool (it creates copies of <img> that we have to update manually)
-                    $('.jcrop-holder img').attr('src', fxCanvas.toDataURL());
-                }
-            })
-            //show output from glfx.js
-            .attr('src', fxCanvas.toDataURL());
+        $(img).attr('src', fxCanvas.toDataURL());
     }
 
     function step3() {
