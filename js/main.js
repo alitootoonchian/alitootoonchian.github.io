@@ -44,7 +44,6 @@
                     return source.id;
                 });
 
-                print(rearCameraIds.length)
                 if (rearCameraIds.length) {
                     deferred.resolve(rearCameraIds[0]);
                 } else {
@@ -140,6 +139,7 @@
         //draw picture from video on canvas
         ctx.drawImage(video, 0, 0);
 
+        /*
         //modify the picture using glfx.js filters
         texture = fxCanvas.texture(canvas);
         fxCanvas.draw(texture)
@@ -150,7 +150,7 @@
 
         window.texture = texture;
         window.fxCanvas = fxCanvas;
-
+*/
         $(img)
             //setup the crop utility
             .one('load', function () {
