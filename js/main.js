@@ -148,6 +148,7 @@
         window.fxCanvas = fxCanvas;
 
         $(img).attr('src', fxCanvas.toDataURL());
+        $('#adjust').removeAttr('disabled')
     }
 
     function step3() {
